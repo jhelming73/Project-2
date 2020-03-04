@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import Joke from "./Joke";
+import CleanJoke from "./CleanJoke";
 import './App.css';
-import AboutMe from "./AboutMe";
+// import AboutMe from "./AboutMe";
 import axios from "axios";
 
 
@@ -54,8 +55,35 @@ class App extends Component {
 
   }
 
+  newCleanJoke() {
+    axios({
+      method: 'get',
+      url: 'http://api.icndb.com/jokes/random?exclude=[explicit]',
+      headers: { 'Accept': 'application/json'}
+    })
+      .then(response => {
+        // console.log(response)
+        // console.log(response.data.value.joke)
+
+        this.setState({
+          joke: response.data.value.joke
+        })
+      })
+      .catch(error => {
+        console.log(error);
+      })
+
+  }
+
   handleClick = (event) => {
     this.newJoke()
+    let jokeButtonClicked = event.target.value
+    this.setState({ jokeButtonClicked })
+    // console.log(jokeButtonClicked)
+  }
+
+  handleCleanClick = (event) => {
+    this.newCleanJoke()
     let jokeButtonClicked = event.target.value
     this.setState({ jokeButtonClicked })
     console.log(jokeButtonClicked)
@@ -72,10 +100,11 @@ class App extends Component {
           <Joke joke={this.state.joke} />
         </div>
         <div>
-          <AboutMe />
+          {/* <AboutMe /> */}
         </div>
           <button onClick={this.handleClick}>New Joke </button>
-          <button onClick={this.handleClick}>About Me </button>
+          <button onClick={this.handleCleanClick}>New Clean Joke </button>
+          <button onClick={this.handleAboutMeClick}>About Me </button>
         <p>Hello</p>
         <nav>
 
