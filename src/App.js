@@ -18,7 +18,7 @@ class App extends Component {
     this.newJoke()
       axios({
         method: 'get',
-        url: 'http://api.icndb.com/jokes/15',
+        url: 'http://api.icndb.com/jokes/random/',
         headers: { 'Accept': 'application/json'}
       })
         .then(response => {
@@ -37,16 +37,16 @@ class App extends Component {
   newJoke() {
     axios({
       method: 'get',
-      url: 'http://api.icndb.com/jokes/15',
+      url: 'http://api.icndb.com/jokes/random/',
       headers: { 'Accept': 'application/json'}
     })
       .then(response => {
         // console.log(response)
         // console.log(response.data.value.joke)
 
-        // this.setState({
-        //   joke: response.data.value.joke
-        // })
+        this.setState({
+          joke: response.data.value.joke
+        })
       })
       .catch(error => {
         console.log(error);
