@@ -2,41 +2,56 @@ import React, { Component } from 'react';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import Joke from "./Joke";
 import './App.css';
-
+import AboutMe from "./AboutMe";
 import axios from "axios";
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      saying: []
+      joke: []
     }
   }
 
-  goChuck() {
+  componentDidMount() {
+    this.newJoke()
+      axios({
+        method: 'get',
+        url: 'http://api.icndb.com/jokes/15',
+        headers: { 'Accept': 'application/json'}
+      })
+        .then(response => {
+          // console.log(response.data)
+          // console.log(response.data.value.joke)
+  
+          this.setState({
+            joke: response.data.value.joke
+          })
+        })
+        .catch(error => {
+          console.log(error);
+        })
+  }
+
+  newJoke() {
     axios({
       method: 'get',
-      url: 'http://api.icndb.com/jokes/random/',
-      // headers: { 'Accept': 'application/json'}
+      url: 'http://api.icndb.com/jokes/15',
+      headers: { 'Accept': 'application/json'}
     })
       .then(response => {
-        console.log(response)
+        // console.log(response)
         // console.log(response.data.value.joke)
 
-        this.setState({
-          goChuck: response
-        })
+        // this.setState({
+        //   joke: response.data.value.joke
+        // })
       })
       .catch(error => {
         console.log(error);
       })
 
-  }
-
-
-  componentDidMount() {
-    this.goChuck()
   }
 
   handleClick = (event) => {
@@ -47,17 +62,20 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.joke)
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Chuck Norris</h1>
         </header>
         <div className="Joke-area">
-          <Joke jokes={this.state.jokes} />
+          <Joke joke={this.state.joke} />
         </div>
-                {/* </div>
-                <button onClick={this.handleClick}>New Joke </button>
-                <div> */}
+        <div>
+          <AboutMe />
+        </div>
+          <button onClick={this.handleClick}>New Joke </button>
+          <button onClick={this.handleClick}>About Me </button>
         <p>Hello</p>
         <nav>
 

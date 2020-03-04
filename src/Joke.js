@@ -7,9 +7,9 @@ class Joke extends Component {
         super()
     }
     render() {
-        console.log(this.props.jokes)
+        console.log(this.props.joke)
         return (
-            <div>{this.props.jokes}</div>
+            <div>{this.props.joke}</div>
         )
     }
 }
