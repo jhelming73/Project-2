@@ -1,5 +1,8 @@
+
+
 .App {
   text-align: center;
+  background-image: url("https://media.giphy.com/media/7qZ3ZX1Gu3TZm/source.gif");
 }
 
 .App-logo {
@@ -8,11 +11,11 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: blue;
   height: 50px;
   padding: 20px;
   color: white;
-  text-align: left;
+  text-align: Center;
 }
 
 .App-title {
@@ -40,6 +43,16 @@ button {
   padding: 25px 80px;
   border-radius: 8px;
   text-align: center;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 25px 80px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

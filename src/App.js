@@ -102,9 +102,9 @@ class App extends Component {
         <div>
           {/* <AboutMe /> */}
         </div>
-          <button onClick={this.handleClick}>New Joke </button>
-          <button onClick={this.handleCleanClick}>New Clean Joke </button>
-          <button onClick={this.handleAboutMeClick}>About Me </button>
+          <button onClick={this.handleClick}>Everything Chuck </button>
+          <button onClick={this.handleCleanClick}>Clean Chuck </button>
+           <a className="button" href="https://www.linkedin.com/in/jared-helming-pmp-b371617/">About Me</a>
         <p>Hello</p>
         <nav>
 
