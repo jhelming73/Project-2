@@ -11,8 +11,7 @@ export class AboutMe extends Component {
   render(){
     return (
     <div className="About_Me">
-        About Me
-        <a className="button" href="https://www.linkedin.com/in/jared-helming-pmp-b371617/">About Me</a> 
+        <a className="AboutMeButton" href="https://www.linkedin.com/in/jared-helming-pmp-b371617/">ABOUT ME</a> 
     </div>
     )
 }
@@ -22,4 +21,3 @@ export class AboutMe extends Component {
 export default AboutMe;
 
 // https://inneka.com/programming/react/react-router-external-link-2/
-//https://www.linkedin.com/in/jared-helming-pmp-b371617/

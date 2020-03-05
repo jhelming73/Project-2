@@ -10,9 +10,18 @@
   /* background-position: center;  */
 }
 
+body {
+  text-align: center;
+  background-image: "/Chuck3.jpg";
+  /* background-image: url("https://media.giphy.com/media/BIuuwHRNKs15C/source.gif"); */
+  /* background-size: cover;  */
+  /* background-position: center;  */
+}
+
 .Home {
   text-align: center;
-  background-image: url("https://media.giphy.com/media/BIuuwHRNKs15C/source.gif");
+  /* background-image: url("Chuck3.jpg"); */
+  /* background-image: url("https://media.giphy.com/media/BIuuwHRNKs15C/source.gif"); */
   background-repeat: no-repeat;
   height: 600px;
   /* background-size: cover;  */
@@ -25,7 +34,7 @@
   background-repeat: no-repeat;
   height: 600px;
   /* background-size: cover;  */
-  /* background-position: center;  */
+  background-position: center; 
 }
 
 
@@ -48,7 +57,7 @@
   color: black;
   padding: 50px;
   width: 300px;
-  box-shadow: 4px 4px 9px gray;
+  box-shadow: 4px 4px 9px brown;
 }
 
 
@@ -60,7 +69,7 @@
   color: black;
   padding: 50px;
   width: 300px;
-  box-shadow: 4px 4px 9px gray;
+    box-shadow: 4px 4px 9px green;
 }
 
 
@@ -81,4 +90,13 @@ button {
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
+}
+
+.AboutMeButton {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
 }

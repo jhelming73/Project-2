@@ -92,25 +92,23 @@ class App extends Component {
   render() {
     console.log(this.state.joke)
     return (
+      <body>
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Chuck Norris</h1>
         </header>
         
-        {/* <div className="Joke-area"> */}
-          {/* <Joke joke={this.state.joke} /> */}
-        {/* </div> */}
-        <div>
-          {/* <AboutMe /> */}
-        </div>
+        {/* <div className="Joke-area"> 
+          <Joke joke={this.state.joke} />
+        </div> */}
+       
           
           {/* <button onClick={this.handleCleanClick}>Clean Chuck </button> */}
           {/* <CleanJoke /> */}
-        
-        <p>Hello</p>
+
         <nav>
           <Link to='/'> Home </Link>
-          <Link to='/About_Me'> About Me </Link>
+          <Link to='/About_Me'className="AboutMeButton"> About Me </Link>
           <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>
           <Link to='/Joke' > <button onClick={this.handleClick}>Everything Chuck </button> </Link>
           {/* <Link to='/park/:id'> Park Detail </Link> */}
@@ -127,6 +125,7 @@ class App extends Component {
             </Switch>
         </main>
       </div>
+      </body>
     );
   }
 }
