@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Link,  } from "react";
 import "./App.css";
 
 
@@ -9,7 +9,12 @@ class CleanJoke extends Component {
     render() {
         // console.log(this.props.joke)
         return (
-            <div>{this.props.joke}</div>
+            <div className="CleanJoke">
+                <div>{this.props.joke}</div>
+                <div>
+                    Clean Joke
+                </div>
+            </div>
         )
     }
 }

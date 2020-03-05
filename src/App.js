@@ -3,8 +3,9 @@ import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import Joke from "./Joke";
 import CleanJoke from "./CleanJoke";
 import './App.css';
-// import AboutMe from "./AboutMe";
+import AboutMe from "./AboutMe";
 import axios from "axios";
+import Home from "./Home";
 
 
 class App extends Component {
@@ -20,7 +21,6 @@ class App extends Component {
       axios({
         method: 'get',
         url: 'http://api.icndb.com/jokes/random/',
-        headers: { 'Accept': 'application/json'}
       })
         .then(response => {
           // console.log(response.data)
@@ -39,7 +39,6 @@ class App extends Component {
     axios({
       method: 'get',
       url: 'http://api.icndb.com/jokes/random/',
-      headers: { 'Accept': 'application/json'}
     })
       .then(response => {
         // console.log(response)
@@ -59,7 +58,6 @@ class App extends Component {
     axios({
       method: 'get',
       url: 'http://api.icndb.com/jokes/random?exclude=[explicit]',
-      headers: { 'Accept': 'application/json'}
     })
       .then(response => {
         // console.log(response)
@@ -80,6 +78,7 @@ class App extends Component {
     let jokeButtonClicked = event.target.value
     this.setState({ jokeButtonClicked })
     // console.log(jokeButtonClicked)
+    console.log("dirty Chuck")
   }
 
   handleCleanClick = (event) => {
@@ -87,6 +86,7 @@ class App extends Component {
     let jokeButtonClicked = event.target.value
     this.setState({ jokeButtonClicked })
     console.log(jokeButtonClicked)
+    console.log("clean")
   }
 
   render() {
@@ -96,26 +96,35 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Chuck Norris</h1>
         </header>
-        <div className="Joke-area">
-          <Joke joke={this.state.joke} />
-        </div>
+        
+        {/* <div className="Joke-area"> */}
+          {/* <Joke joke={this.state.joke} /> */}
+        {/* </div> */}
         <div>
           {/* <AboutMe /> */}
         </div>
-          <button onClick={this.handleClick}>Everything Chuck </button>
-          <button onClick={this.handleCleanClick}>Clean Chuck </button>
-           <a className="button" href="https://www.linkedin.com/in/jared-helming-pmp-b371617/">About Me</a>
+          
+          {/* <button onClick={this.handleCleanClick}>Clean Chuck </button> */}
+          {/* <CleanJoke /> */}
+        
         <p>Hello</p>
         <nav>
-
-          {/* <Link to='/'> Home </Link> */}
+          <Link to='/'> Home </Link>
+          <Link to='/About_Me'> About Me </Link>
+          <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>
+          <Link to='/Joke' > <button onClick={this.handleClick}>Everything Chuck </button> </Link>
           {/* <Link to='/park/:id'> Park Detail </Link> */}
         </nav>
         <main>
-          {/* <Switch>
-            <Route path='/' exact render={() => <ParkList parks={this.state.parks}/>} />
-            <Route path='/park/:id' render={(props) => <ParkDetail {...props} parks={this.state.parks}/>} />
-            </Switch> */}
+          <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/About_Me" component={AboutMe} />
+          <Route path="/CleanJoke" render={() => <CleanJoke joke={this.state.joke}/>} />
+          <Route path="/Joke" render={() => <Joke joke={this.state.joke}/>} />
+
+            {/* <Route path='/' exact render={() => <ParkList parks={this.state.parks}/>} />
+            <Route path='/park/:id' render={(props) => <ParkDetail {...props} parks={this.state.parks}/>} /> */}
+            </Switch>
         </main>
       </div>
     );

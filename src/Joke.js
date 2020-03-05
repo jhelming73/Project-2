@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 
-
 class Joke extends Component {
     constructor(props) {
         super()
@@ -9,7 +8,12 @@ class Joke extends Component {
     render() {
         // console.log(this.props.joke)
         return (
-            <div>{this.props.joke}</div>
+            <div className="Joke-area">
+                <div>{this.props.joke}</div>
+                <div>
+                
+                </div>
+            </div>
         )
     }
 }
