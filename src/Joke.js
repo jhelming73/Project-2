@@ -11,7 +11,7 @@ class Joke extends Component {
             <div className="Joke-area">
                 <div>{this.props.joke}</div>
                 <div>
-                
+                 Everything Joke
                 </div>
             </div>
         )

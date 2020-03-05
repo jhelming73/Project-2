@@ -1,6 +1,15 @@
 
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
 
 .App {
+  display: grid;
   text-align: center;
   /* background-image: url("https://media.giphy.com/media/7qZ3ZX1Gu3TZm/source.gif"); */
   /* background-image: url("https://media.giphy.com/media/BIuuwHRNKs15C/source.gif"); */
@@ -53,7 +62,7 @@ body {
 
 .Joke-area {
   width: 50vw;
-  margin: 100px auto;
+  margin-left: 999px;
   border-radius: 5px;
   color: black;
   padding: 50px;
@@ -98,6 +107,6 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  color: black;
+  color: white;
   text-align: center;
 }
