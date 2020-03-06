@@ -10,8 +10,8 @@ export class AboutMe extends Component {
   
   render(){
     return (
-    <div className="About_Me">
-        <a className="AboutMeButton" href="https://www.linkedin.com/in/jared-helming-pmp-b371617/">ABOUT ME</a> 
+    <div className="About_Me_Picture">
+        <a className="AboutMeButton" href="https://www.linkedin.com/in/jared-helming-pmp-b371617/">LinkedIn</a> 
     </div>
     )
 }

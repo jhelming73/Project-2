@@ -105,10 +105,9 @@ class App extends Component {
           {/* <button onClick={this.handleCleanClick}>Clean Chuck </button> */}
           {/* <CleanJoke /> */}
 
-        <nav>
-          <Link to='/'className="Home"> Home </Link>
+        <nav className="Nav">
+          <Link to='/'> Home </Link>
           <Link to='/About_Me'className="AboutMeButton"> About Me </Link>
-          {/* <Link to='/park/:id'> Park Detail </Link> */}
         </nav>
 
         <main>
@@ -124,7 +123,7 @@ class App extends Component {
         <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>
         <Link to='/Joke' > <button onClick={this.handleClick}>Everything Chuck </button> </Link>
         </section>
-        
+
       </div>
       </body>
     );
