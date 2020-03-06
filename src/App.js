@@ -6,6 +6,7 @@ import './App.css';
 import AboutMe from "./AboutMe";
 import axios from "axios";
 import Home from "./Home";
+import Header from "./Header";
 
 
 class App extends Component {
@@ -94,9 +95,7 @@ class App extends Component {
     return (
       <body>
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Chuck Norris</h1>
-        </header>
+      <Header />
         
         {/* <div className="Joke-area"> 
           <Joke joke={this.state.joke} />
@@ -107,23 +106,25 @@ class App extends Component {
           {/* <CleanJoke /> */}
 
         <nav>
-          <Link to='/'> Home </Link>
+          <Link to='/'className="Home"> Home </Link>
           <Link to='/About_Me'className="AboutMeButton"> About Me </Link>
-          <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>
-          <Link to='/Joke' > <button onClick={this.handleClick}>Everything Chuck </button> </Link>
           {/* <Link to='/park/:id'> Park Detail </Link> */}
         </nav>
+
         <main>
           <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/About_Me" component={AboutMe} />
           <Route path="/CleanJoke" render={() => <CleanJoke joke={this.state.joke}/>} />
           <Route path="/Joke" render={() => <Joke joke={this.state.joke}/>} />
-
-            {/* <Route path='/' exact render={() => <ParkList parks={this.state.parks}/>} />
-            <Route path='/park/:id' render={(props) => <ParkDetail {...props} parks={this.state.parks}/>} /> */}
-            </Switch>
+          </Switch>
         </main>
+
+        <section className="JokeButtons">
+        <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>
+        <Link to='/Joke' > <button onClick={this.handleClick}>Everything Chuck </button> </Link>
+        </section>
+        
       </div>
       </body>
     );
