@@ -1,17 +1,4 @@
 
-
-.container {
-  border: 5px black solid;
-  width: 700px;
-  margin: 50px auto;
-  height: 650px;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-rows: 100px 200px 1fr 1fr;
-  grid-template-columns: 150px 1fr 150px;
-  border: 25px black;
-} 
-
 .JokeButtons{
   /* display: grid; */
   /* display: inline-flex; */
@@ -125,6 +112,10 @@ body {
 
 .App-title {
   font-size: 1.5em;
+}
+
+.LinkedIn{
+  color: white
 }
 
 button {
