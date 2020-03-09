@@ -14,6 +14,9 @@ The Chuck Norris API project fulfills the following requirements:
 
 ## Necessary Deliverables:
 - Wireframe: ![wireframe](./src/Wireframe.pdf)
+<p align="center">
+<img src='https://github.com/jhelming73/Project-2/blob/master/src/Wireframe.pdf' width=600 align='center'>
+</p>
 
 ## Necessary Deliverables:
 
