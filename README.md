@@ -13,7 +13,7 @@ The Chuck Norris API project fulfills the following requirements:
 - Deployed to production via Surge ✔
 
 ## Necessary Deliverables:
-- Wireframe: ![](Wireframe.pdf)
+- Wireframe: ![wireframe](./Wireframe.pdf)
 
 ## Necessary Deliverables:
 
