@@ -8,7 +8,6 @@ import axios from "axios";
 import Home from "./Home";
 import Header from "./Header";
 import AudioPlayer from './AudioPlayer';
-// import Theme from "./Theme";
 
 
 class App extends Component {
@@ -26,9 +25,6 @@ class App extends Component {
       url: 'http://api.icndb.com/jokes/random/',
     })
       .then(response => {
-        // console.log(response.data)
-        // console.log(response.data.value.joke)
-
         this.setState({
           joke: response.data.value.joke
         })
@@ -44,9 +40,6 @@ class App extends Component {
       url: 'http://api.icndb.com/jokes/random/',
     })
       .then(response => {
-        // console.log(response)
-        // console.log(response.data.value.joke)
-
         this.setState({
           joke: response.data.value.joke
         })
@@ -63,9 +56,6 @@ class App extends Component {
       url: 'http://api.icndb.com/jokes/random?exclude=[explicit]',
     })
       .then(response => {
-        // console.log(response)
-        // console.log(response.data.value.joke)
-
         this.setState({
           joke: response.data.value.joke
         })
@@ -80,20 +70,15 @@ class App extends Component {
     this.newJoke()
     let jokeButtonClicked = event.target.value
     this.setState({ jokeButtonClicked })
-    // console.log(jokeButtonClicked)
-    console.log("dirty Chuck")
   }
 
   handleCleanClick = (event) => {
     this.newCleanJoke()
     let jokeButtonClicked = event.target.value
     this.setState({ jokeButtonClicked })
-    console.log(jokeButtonClicked)
-    console.log("clean")
   }
 
   render() {
-    console.log(this.state.joke)
     return (
       <body>
         <div className="App">

@@ -7,13 +7,9 @@ class CleanJoke extends Component {
         super()
     }
     render() {
-        // console.log(this.props.joke)
         return (
             <div className="CleanJoke">
                 <div>{this.props.joke}</div>
-                {/* <div>
-                    Clean Joke
-                </div> */}
             </div>
         )
     }

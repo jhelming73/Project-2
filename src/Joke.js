@@ -6,13 +6,9 @@ class Joke extends Component {
         super()
     }
     render() {
-        // console.log(this.props.joke)
         return (
             <div className="Joke-area">
                 <div>{this.props.joke}</div>
-                {/* <div>
-                 Everything Joke
-                </div> */}
             </div>
         )
     }

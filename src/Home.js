@@ -5,15 +5,11 @@ export class Home extends Component {
     super();
     this.state = {};
   }
-//   componentWillMount(){
-//     window.location = this.state.route.loc;
-  
   render(){
     return (
-    <div 
-    className="Home"
+    <div className="Home">
 
-        ></div>
+    </div>
     )
 }
 }
