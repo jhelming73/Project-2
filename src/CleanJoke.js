@@ -11,9 +11,9 @@ class CleanJoke extends Component {
         return (
             <div className="CleanJoke">
                 <div>{this.props.joke}</div>
-                <div>
+                {/* <div>
                     Clean Joke
-                </div>
+                </div> */}
             </div>
         )
     }

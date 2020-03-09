@@ -10,9 +10,9 @@ class Joke extends Component {
         return (
             <div className="Joke-area">
                 <div>{this.props.joke}</div>
-                <div>
+                {/* <div>
                  Everything Joke
-                </div>
+                </div> */}
             </div>
         )
     }

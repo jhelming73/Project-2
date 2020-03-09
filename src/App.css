@@ -4,14 +4,17 @@
   /* display: inline-flex; */
   /* position: bottom; */
   /* position: relative; */
-  padding-top: 450px;
+  padding-top: 400px;
   /* grid-row: 3 / span 3;
   grid-column: 2 / span 2; */
   /* grid-template-rows: 10px 20px 1fr 1fr;
   grid-template-columns: 10px 1fr 10px; */
 }
-
+.Audio{
+  padding-top: 300px;
+}
 .Joke-area {
+  display: flex;
   width: 50vw;
   margin-left: 999px;
   border-radius: 5px;

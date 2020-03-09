@@ -7,6 +7,8 @@ import AboutMe from "./AboutMe";
 import axios from "axios";
 import Home from "./Home";
 import Header from "./Header";
+import AudioPlayer from './AudioPlayer';
+// import Theme from "./Theme";
 
 
 class App extends Component {
@@ -19,21 +21,21 @@ class App extends Component {
 
   componentDidMount() {
     this.newJoke()
-      axios({
-        method: 'get',
-        url: 'http://api.icndb.com/jokes/random/',
+    axios({
+      method: 'get',
+      url: 'http://api.icndb.com/jokes/random/',
+    })
+      .then(response => {
+        // console.log(response.data)
+        // console.log(response.data.value.joke)
+
+        this.setState({
+          joke: response.data.value.joke
+        })
       })
-        .then(response => {
-          // console.log(response.data)
-          // console.log(response.data.value.joke)
-  
-          this.setState({
-            joke: response.data.value.joke
-          })
-        })
-        .catch(error => {
-          console.log(error);
-        })
+      .catch(error => {
+        console.log(error);
+      })
   }
 
   newJoke() {
@@ -94,37 +96,33 @@ class App extends Component {
     console.log(this.state.joke)
     return (
       <body>
-      <div className="App">
-      <Header />
-        
-        {/* <div className="Joke-area"> 
-          <Joke joke={this.state.joke} />
-        </div> */}
-       
-          
-          {/* <button onClick={this.handleCleanClick}>Clean Chuck </button> */}
-          {/* <CleanJoke /> */}
+        <div className="App">
+          <Header />
 
-        <nav className="Nav">
-          <Link to='/'> Home </Link>
-          <Link to='/About_Me'className="AboutMeButton"> About Me </Link>
-        </nav>
+          <nav className="Nav">
+            <Link to='/'> Home </Link>
+            <Link to='/About_Me' className="AboutMeButton"> About Me </Link>
+          </nav>
 
-        <main>
-          <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/About_Me" component={AboutMe} />
-          <Route path="/CleanJoke" render={() => <CleanJoke joke={this.state.joke}/>} />
-          <Route path="/Joke" render={() => <Joke joke={this.state.joke}/>} />
-          </Switch>
-        </main>
+          <main>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/About_Me" component={AboutMe} />
+              <Route path="/CleanJoke" render={() => <CleanJoke joke={this.state.joke} />} />
+              <Route path="/Joke" render={() => <Joke joke={this.state.joke} />} />
+            </Switch>
+          </main>
 
-        <section className="JokeButtons">
-        <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>
-        <Link to='/Joke' > <button onClick={this.handleClick}>Everything Chuck </button> </Link>
-        </section>
+          <section className="JokeButtons">
+            <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>
+            <Link to='/Joke' > <button onClick={this.handleClick}>Everything Chuck </button> </Link>
+          </section>
 
-      </div>
+          <div>
+            <AudioPlayer />
+          </div>
+
+        </div>
       </body>
     );
   }

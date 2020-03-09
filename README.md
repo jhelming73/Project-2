@@ -1,7 +1,7 @@
 # Chuck Norris API
 
 ## Technical Requirements
-The hangman game fulfills the following requirements:
+The Chuck Norris API project fulfills the following requirements:
 - Be a working, interactive, React application ✔
 - Include data from a third-party API ✔
 - Uses React Router ✔
@@ -13,7 +13,7 @@ The hangman game fulfills the following requirements:
 - Deployed to production via Surge ✔
 
 ## Necessary Deliverables:
-- Wireframe:
+- Wireframe: ![](image.png)
 
 ## Necessary Deliverables:
 
@@ -22,3 +22,4 @@ The hangman game fulfills the following requirements:
 - One of the major issues I had was due to the need to call upon the API to get a new joke, I had trouble getting to work the passing of a function to the components vs only on the App.js file. I think by having more practice working with React and API's, I could learn how to refactor this code base.
 - Here is the Chuck Norris API information: http://www.icndb.com/api/
 - This description and proposal has been signed off on my the instructor.
+- I added a Walker Texas Ranger theme song for some added flair!
