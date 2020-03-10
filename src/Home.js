@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
 export class Home extends Component {
-  constructor( props ){
+  constructor(props) {
     super();
     this.state = {};
   }
-  render(){
+  render() {
     return (
-    <div className="Home">
+      <div className="Home">
 
-    </div>
+      </div>
     )
-}
+  }
 }
 
 

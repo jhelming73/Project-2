@@ -30,7 +30,6 @@ class App extends Component {
         })
       })
       .catch(error => {
-        console.log(error);
       })
   }
 
@@ -45,7 +44,6 @@ class App extends Component {
         })
       })
       .catch(error => {
-        console.log(error);
       })
 
   }
@@ -61,7 +59,6 @@ class App extends Component {
         })
       })
       .catch(error => {
-        console.log(error);
       })
 
   }
@@ -89,14 +86,13 @@ class App extends Component {
             <Link to='/About_Me' className="AboutMeButton"> About Me </Link>
           </nav>
 
-          <main>
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/About_Me" component={AboutMe} />
               <Route path="/CleanJoke" render={() => <CleanJoke joke={this.state.joke} />} />
               <Route path="/Joke" render={() => <Joke joke={this.state.joke} />} />
             </Switch>
-          </main>
+        
 
           <section className="JokeButtons">
             <Link to='/CleanJoke' > <button onClick={this.handleCleanClick}>Clean Chuck </button> </Link>

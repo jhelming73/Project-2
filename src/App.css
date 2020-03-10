@@ -1,26 +1,25 @@
 
 .JokeButtons{
-  padding-top: 400px;
+  padding-top: 550px;
 }
-.Audio{
-  padding-top: 300px;
-}
+
 .Joke-area {
-  display: flex;
+  display: grid;
   width: 50vw;
-  margin-left: 999px;
+  margin-left: 1000px;
   border-radius: 5px;
   color: black;
-  padding: 50px;
+  padding: 20px;
   width: 300px;
   box-shadow: 4px 4px 9px brown;
 }
 
 .CleanJoke {
   width: 50vw;
+  margin-left: 25px;
   border-radius: 5px;
   color: black;
-  padding: 50px;
+  padding: 20px;
   width: 300px;
   box-shadow: 4px 4px 9px green;
 }
@@ -31,20 +30,10 @@
 }
 
 body {
-  display: grid;
   text-align: center;
   background-image: url("./Chuck6.jpg");
   background-repeat: no-repeat;
-  height: 650px;
-  /* background-image: url("https://media.giphy.com/media/BIuuwHRNKs15C/source.gif"); */
   background-size: cover; 
-  /* background-position: center;  */
-  /* width: 700px;
-  margin: 50px auto;
-  height: 650px;
-  grid-template-rows: 100px 200px 1fr 1fr;
-  grid-template-columns: 150px 1fr 150px;
-  border: 25px black; */
 }
 
 .Nav{
@@ -57,8 +46,6 @@ body {
 .AboutMeButton {
   grid-row: 1;
   grid-column: 2;
-  left: 0;
-  bottom: 0;
   width: 100%;
   color: black;
   text-align: right;
@@ -68,9 +55,8 @@ body {
   text-align: center;
   background-image: url("https://media.giphy.com/media/7qZ3ZX1Gu3TZm/source.gif");
   background-repeat: no-repeat;
-  height: 470px;
+  height: 400px;
   background-position: center; 
-  padding-bottom:-5px;
 }
 
 
@@ -90,8 +76,6 @@ body {
 }
 
 button {
-  /* grid-row: 3;
-  grid-column: 4; */
   background-color: black;
   color: white;
   font-size: 20px;

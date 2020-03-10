@@ -5,7 +5,7 @@ class AudioPlayer extends React.Component {
   render() {
     return (
       <div>
-        <audio ref="audio_tag" src={sound} controls autoPlay/>
+        <audio ref="audio_tag" src={sound} controls autoPlay />
       </div>
     );
   }
