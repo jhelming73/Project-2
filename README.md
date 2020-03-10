@@ -23,3 +23,4 @@ The Chuck Norris API project fulfills the following requirements:
 - Here is the Chuck Norris API information: http://www.icndb.com/api/
 - This description and proposal has been signed off on my the instructor.
 - I added a Walker Texas Ranger theme song for some added flair! 
+- Go here: http://chuck-norris.surge.sh/ to view the new Chuck Norris app!
